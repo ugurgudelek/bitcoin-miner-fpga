@@ -1,0 +1,32 @@
+01:55:48 **** Incremental Build of configuration Debug for project bitcoin ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../bitcoin_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:140:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/helloworld.c: In function 'UartTest':
+../src/helloworld.c:191:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^
+../src/helloworld.c:203:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: bitcoin.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bitcoin_bsp/ps7_cortexa9_0/lib -o "bitcoin.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: bitcoin.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size bitcoin.elf  |tee "bitcoin.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34744	   1976	  22900	  59620	   e8e4	bitcoin.elf
+'Finished building: bitcoin.elf.size'
+' '
+
+01:55:49 Build Finished (took 750ms)
+

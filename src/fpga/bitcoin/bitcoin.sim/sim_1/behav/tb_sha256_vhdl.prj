@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../bitcoin.srcs/sources_1/imports/src/sha256_types.vhd"
+vhdl xil_defaultlib  "../../../bitcoin.srcs/sources_1/imports/src/sha256_constants.vhd"
+vhdl xil_defaultlib  "../../../bitcoin.srcs/sources_1/imports/src/sha256_functions.vhd"
+vhdl xil_defaultlib  "../../../bitcoin.srcs/sources_1/imports/src/sha256.vhd"
+vhdl xil_defaultlib  "../../../bitcoin.srcs/sim_1/imports/testbench/testrom.vhd"
+vhdl xil_defaultlib  "../../../bitcoin.srcs/sim_1/imports/testbench/tb_sha256.vhd"
+
+# Do not sort compile order
+nosort

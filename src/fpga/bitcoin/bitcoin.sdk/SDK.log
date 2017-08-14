@@ -1,0 +1,834 @@
+00:36:59 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+00:37:01 INFO  : XSDB server has started successfully.
+00:37:02 INFO  : Processing command line option -hwspec C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper.hdf.
+00:54:15 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+00:54:16 INFO  : XSDB server has started successfully.
+00:54:21 INFO  : Processing command line option -hwspec C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper.hdf.
+00:54:22 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+00:54:22 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1502574845057,  Project:1502572739907
+00:54:22 INFO  : The hardware specification for project 'system_wrapper_hw_platform_0' is different from C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper.hdf.
+00:54:22 INFO  : Copied contents of C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper.hdf into \system_wrapper_hw_platform_0\system.hdf.
+00:54:27 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+00:54:27 INFO  : Clearing existing target manager status.
+00:54:28 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+00:54:28 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+00:59:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:59:42 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+00:59:43 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+00:59:43 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+00:59:43 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+00:59:43 INFO  : 'stop' command is executed.
+00:59:44 INFO  : 'ps7_init' command is executed.
+00:59:44 INFO  : 'con' command is executed.
+00:59:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:59:44 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+00:59:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:59:45 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:59:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+00:59:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:59:45 INFO  : 'con' command is executed.
+00:59:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:04:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:04:07 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:04:07 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:04:07 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:04:07 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:04:07 INFO  : 'stop' command is executed.
+01:04:08 INFO  : 'ps7_init' command is executed.
+01:04:08 INFO  : 'con' command is executed.
+01:04:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:04:09 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:04:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:04:09 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:04:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:04:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:04:10 INFO  : 'con' command is executed.
+01:04:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:13:55 INFO  : Disconnected from the channel tcfchan#1.
+01:13:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:13:55 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:13:55 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:13:55 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:13:56 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:13:56 INFO  : 'stop' command is executed.
+01:13:56 INFO  : 'ps7_init' command is executed.
+01:13:56 INFO  : 'con' command is executed.
+01:13:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:13:57 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:13:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:13:57 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:13:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:13:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:13:58 INFO  : 'con' command is executed.
+01:13:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:20:07 INFO  : Disconnected from the channel tcfchan#2.
+01:20:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:20:08 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:20:08 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:20:08 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:20:08 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:20:08 INFO  : 'stop' command is executed.
+01:20:09 INFO  : 'ps7_init' command is executed.
+01:20:09 INFO  : 'con' command is executed.
+01:20:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:20:10 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:20:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:20:10 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:20:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:20:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:20:10 INFO  : 'con' command is executed.
+01:20:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:20:30 INFO  : Disconnected from the channel tcfchan#3.
+01:20:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:20:31 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:20:31 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:20:31 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:20:32 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:20:32 INFO  : 'stop' command is executed.
+01:20:32 INFO  : 'ps7_init' command is executed.
+01:20:33 INFO  : 'con' command is executed.
+01:20:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:20:33 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:20:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:20:33 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:20:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:20:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:20:34 INFO  : 'con' command is executed.
+01:20:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:23:37 INFO  : Disconnected from the channel tcfchan#4.
+01:23:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:23:37 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:23:38 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:23:38 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:23:38 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:23:38 INFO  : 'stop' command is executed.
+01:23:39 INFO  : 'ps7_init' command is executed.
+01:23:39 INFO  : 'con' command is executed.
+01:23:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:23:39 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:23:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:23:40 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:23:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:23:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:23:40 INFO  : 'con' command is executed.
+01:23:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:28:12 INFO  : Disconnected from the channel tcfchan#5.
+01:28:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:28:12 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:28:12 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:28:12 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:28:13 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:28:13 INFO  : 'stop' command is executed.
+01:28:13 INFO  : 'ps7_init' command is executed.
+01:28:13 INFO  : 'con' command is executed.
+01:28:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:28:14 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:28:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:28:14 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:28:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:28:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:28:15 INFO  : 'con' command is executed.
+01:28:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:28:55 INFO  : Disconnected from the channel tcfchan#6.
+01:28:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:28:55 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:28:56 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:28:56 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:28:56 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:28:56 INFO  : 'stop' command is executed.
+01:28:57 INFO  : 'ps7_init' command is executed.
+01:28:57 INFO  : 'con' command is executed.
+01:28:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:28:57 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:28:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:28:58 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:28:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:28:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:28:58 INFO  : 'con' command is executed.
+01:28:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:31:54 INFO  : Disconnected from the channel tcfchan#7.
+01:31:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:31:54 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:31:54 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:31:54 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:31:55 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:31:55 INFO  : 'stop' command is executed.
+01:31:55 INFO  : 'ps7_init' command is executed.
+01:31:55 INFO  : 'con' command is executed.
+01:31:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:31:56 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:31:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:31:56 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:31:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:31:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:31:57 INFO  : 'con' command is executed.
+01:31:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:32:15 INFO  : Disconnected from the channel tcfchan#8.
+01:32:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:32:16 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:32:16 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:32:16 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:32:17 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:32:17 INFO  : 'stop' command is executed.
+01:32:17 INFO  : 'ps7_init' command is executed.
+01:32:17 INFO  : 'con' command is executed.
+01:32:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:32:18 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:32:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:32:19 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:32:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:32:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:32:19 INFO  : 'con' command is executed.
+01:32:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:38:37 INFO  : Disconnected from the channel tcfchan#9.
+01:38:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:38:37 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:38:37 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:38:37 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:38:38 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:38:38 INFO  : 'stop' command is executed.
+01:38:38 INFO  : 'ps7_init' command is executed.
+01:38:39 INFO  : 'con' command is executed.
+01:38:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:38:39 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:38:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:38:39 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:38:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:38:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:38:40 INFO  : 'con' command is executed.
+01:38:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:42:10 INFO  : Disconnected from the channel tcfchan#10.
+01:42:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:42:10 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:42:11 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:42:11 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:42:11 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:42:11 INFO  : 'stop' command is executed.
+01:42:12 INFO  : 'ps7_init' command is executed.
+01:42:12 INFO  : 'con' command is executed.
+01:42:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:42:12 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:42:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:42:13 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:42:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:42:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:42:13 INFO  : 'con' command is executed.
+01:42:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:45:59 INFO  : Disconnected from the channel tcfchan#11.
+01:45:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:45:59 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:45:59 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:45:59 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:46:00 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:46:00 INFO  : 'stop' command is executed.
+01:46:01 INFO  : 'ps7_init' command is executed.
+01:46:01 INFO  : 'con' command is executed.
+01:46:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:46:01 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:46:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:46:02 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:46:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:46:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:46:02 INFO  : 'con' command is executed.
+01:46:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:46:43 INFO  : Disconnected from the channel tcfchan#12.
+01:46:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:46:43 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:46:44 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:46:44 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:46:45 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:46:45 INFO  : 'stop' command is executed.
+01:46:46 INFO  : 'ps7_init' command is executed.
+01:46:46 INFO  : 'con' command is executed.
+01:46:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:46:46 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:46:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:46:47 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:46:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:46:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:46:47 INFO  : 'con' command is executed.
+01:46:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:47:13 INFO  : Disconnected from the channel tcfchan#13.
+01:47:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:47:13 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:47:13 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:47:13 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:47:14 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:47:14 INFO  : 'stop' command is executed.
+01:47:14 INFO  : 'ps7_init' command is executed.
+01:47:15 INFO  : 'con' command is executed.
+01:47:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:47:15 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:47:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:47:16 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:47:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:47:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:47:16 INFO  : 'con' command is executed.
+01:47:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:48:04 INFO  : Disconnected from the channel tcfchan#14.
+01:48:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:48:05 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:48:05 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:48:05 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:48:05 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:48:06 INFO  : 'stop' command is executed.
+01:48:06 INFO  : 'ps7_init' command is executed.
+01:48:06 INFO  : 'con' command is executed.
+01:48:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:48:07 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:48:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:48:07 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:48:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:48:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:48:08 INFO  : 'con' command is executed.
+01:48:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:48:56 INFO  : Disconnected from the channel tcfchan#15.
+01:48:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:48:57 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:48:57 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:48:57 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:48:58 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:48:58 INFO  : 'stop' command is executed.
+01:48:58 INFO  : 'ps7_init' command is executed.
+01:48:58 INFO  : 'con' command is executed.
+01:48:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:48:59 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:48:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:48:59 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:48:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:48:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:48:59 INFO  : 'con' command is executed.
+01:48:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:49:27 INFO  : Disconnected from the channel tcfchan#16.
+01:49:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:49:28 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:49:28 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:49:28 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:49:29 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:49:29 INFO  : 'stop' command is executed.
+01:49:29 INFO  : 'ps7_init' command is executed.
+01:49:29 INFO  : 'con' command is executed.
+01:49:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:49:30 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:49:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:49:30 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:49:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:49:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:49:30 INFO  : 'con' command is executed.
+01:49:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:49:41 INFO  : Disconnected from the channel tcfchan#17.
+01:49:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:49:41 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:49:41 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:49:41 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:49:42 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:49:42 INFO  : 'stop' command is executed.
+01:49:42 INFO  : 'ps7_init' command is executed.
+01:49:42 INFO  : 'con' command is executed.
+01:49:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:49:43 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:49:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:49:43 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:49:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:49:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:49:43 INFO  : 'con' command is executed.
+01:49:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:50:43 INFO  : Disconnected from the channel tcfchan#18.
+01:50:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:50:43 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:50:43 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:50:43 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:50:44 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:50:44 INFO  : 'stop' command is executed.
+01:50:45 INFO  : 'ps7_init' command is executed.
+01:50:45 INFO  : 'con' command is executed.
+01:50:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:50:45 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:50:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:50:46 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:50:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:50:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:50:46 INFO  : 'con' command is executed.
+01:50:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:52:40 INFO  : Disconnected from the channel tcfchan#19.
+01:52:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:52:40 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:52:41 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:52:41 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:52:41 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:52:41 INFO  : 'stop' command is executed.
+01:52:42 INFO  : 'ps7_init' command is executed.
+01:52:42 INFO  : 'con' command is executed.
+01:52:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:52:42 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:52:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:52:43 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:52:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:52:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:52:43 INFO  : 'con' command is executed.
+01:52:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:53:24 INFO  : Disconnected from the channel tcfchan#20.
+01:53:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:53:24 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:53:25 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:53:25 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:53:25 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:53:25 INFO  : 'stop' command is executed.
+01:53:26 INFO  : 'ps7_init' command is executed.
+01:53:26 INFO  : 'con' command is executed.
+01:53:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:53:26 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:53:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:53:27 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:53:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:53:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:53:27 INFO  : 'con' command is executed.
+01:53:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:55:45 INFO  : Disconnected from the channel tcfchan#21.
+01:55:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:55:49 INFO  : Sourcing of 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:55:50 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:55:50 INFO  : Hardware design information is loaded from 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf'.
+01:55:50 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0' command is executed.
+01:55:50 INFO  : 'stop' command is executed.
+01:55:51 INFO  : 'ps7_init' command is executed.
+01:55:51 INFO  : 'con' command is executed.
+01:55:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:55:51 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:55:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:55:52 INFO  : The application 'C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:55:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+loadhw C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/system_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+stop
+ps7_init
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+dow C:/Users/ugurg/OneDrive/Learnings/Courses/BIL569_Embedded/bitcoin/bitcoin.sdk/bitcoin/Debug/bitcoin.elf
+----------------End of Script----------------
+
+01:55:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:55:52 INFO  : 'con' command is executed.
+01:55:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248A27595"} -index 0
+con
+----------------End of Script----------------
+
+01:56:17 INFO  : Disconnected from the channel tcfchan#22.
+01:59:24 WARN  : Unexpected exception occurred.
+java.io.IOException: Command [C 3166 xsdb eval "disconnect tcfchan#1"] aborted
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:753)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:162)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:254)
+01:59:38 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+02:00:12 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
